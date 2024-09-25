@@ -796,7 +796,7 @@ deps = {
      ],
      'condition': 'download_android_deps',
      'dep_type': 'cipd',
-  }
+  },
 
   'src/flutter/third_party/java/openjdk': {
      'packages': [
