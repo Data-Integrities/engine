@@ -99,6 +99,10 @@ vars = {
   # Checkout Linux dependencies only when building on Linux.
   'download_linux_deps': 'host_os == "linux"',
 
+  # are we on linux arm
+  'linux_arm': 'host_os == "linux" and host_cpu = "arm64"'
+
+
   # The minimum macOS SDK version. This must match the setting in
   # //flutter/tools/gn.
   'mac_sdk_min': '10.14',
@@ -801,14 +805,16 @@ deps = {
         'version': 'version:17'
        }
      ],
-     'condition': '"${{platform}}" != "linux-arm64"',
+     # 'condition': '"${{platform}}" != "linux-arm64"',
+     'condition': 'linux_arm != True',
      # Always download the JDK since java is required for running the formatter.
      'dep_type': 'cipd',
    },
 
   'src/flutter/third_party/java/openjdk/linux-arm64': {
      'url': 'https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-aarch64_bin.tar.gz',
-     'condition': '"${{platform}}" == "linux-arm64"',
+     'condition': 'linux_arm == True',
+     # 'condition': '"${{platform}}" == "linux-arm64"',
      # Always download the JDK since java is required for running the formatter.
      'dep_type': 'cipd',
    },
