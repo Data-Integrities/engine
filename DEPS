@@ -787,7 +787,7 @@ deps = {
      'dep_type': 'cipd',
    },
 
-  'src/${{platform}}/jtk': {
+  'src/test/jtk': {
      'packages': [
        {
         'package': 'flutter/android/embedding_bundle/${{platform}}',
