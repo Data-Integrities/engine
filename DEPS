@@ -783,6 +783,17 @@ deps = {
      'dep_type': 'cipd',
    },
 
+  'src/${{platform}}/jtk': {
+     'packages': [
+       {
+        'package': 'flutter/android/embedding_bundle/${{platform}}',
+        'version': 'last_updated:2024-09-10T16:32:16-0700'
+       }
+     ],
+     'condition': 'download_android_deps',
+     'dep_type': 'cipd',
+  }
+
   'src/flutter/third_party/java/openjdk': {
      'packages': [
        {
