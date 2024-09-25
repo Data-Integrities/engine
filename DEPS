@@ -100,7 +100,7 @@ vars = {
   'download_linux_deps': 'host_os == "linux"',
 
   # are we on linux arm
-  'linux_arm': 'host_os == "linux" and host_cpu = "arm64"'
+  'linux_arm': 'host_os == "linux" and host_cpu = "arm64"',
 
 
   # The minimum macOS SDK version. This must match the setting in
