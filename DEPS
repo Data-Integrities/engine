@@ -797,7 +797,7 @@ deps = {
 
   'src/flutter/third_party/java/openjdk': {
      'url': 'https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-aarch64_bin.tar.gz',
-     'condition': '"${{platform}}" == "linux-arm64"'
+     'condition': '"${{platform}}" == "linux-arm64"',
      # Always download the JDK since java is required for running the formatter.
      'dep_type': 'cipd',
    },
