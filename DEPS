@@ -790,7 +790,7 @@ deps = {
         'version': 'version:17'
        }
      ],
-     'condition': '"${{platform}}" != "linux-arm64"'
+     'condition': '"${{platform}}" != "linux-arm64"',
      # Always download the JDK since java is required for running the formatter.
      'dep_type': 'cipd',
    },
